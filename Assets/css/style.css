@@ -1,0 +1,68 @@
+body{
+    background-color: darkred;
+}
+
+#main-content{
+    background: pink;
+    width: 700px;
+    height: 600px;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.main-game{
+    padding-bottom: 50px;
+    border-color: green;
+    border-style: dashed;
+    width: 600px;
+    margin-left: 50;
+    background: yellow;
+    margin-top: 60px;
+    height: 400px;
+
+}
+#keyStart{
+    position: relative;
+    text-align: left;
+    left: 360;
+    top: 20;
+}
+
+#numberofWins{
+    position: relative;
+    left: 455;
+    top: 20;
+}
+
+#wordtoGuess{
+    position: relative;
+    left: 410px;
+    top: 20px;
+}
+#guessesRemaining{
+    position: relative;
+    left: 455px;
+    top: 20px;
+
+}
+
+#user-guessed{    
+    position: relative;
+    left: 420px;
+    top: 20px;
+}
+
+img{    
+    position: relative;
+    top: -280;
+    left: 20;
+    width: 250;
+}
+.answer{
+    font-size: large;
+    position: relative;
+    left: 260px;
+    top: 40px;
+
+
+}
