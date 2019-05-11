@@ -1,9 +1,11 @@
 body{
-    background-color: darkred;
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+    font-size: 20px
 }
 
 #main-content{
-    background: pink;
+    background: rgb(0, 0, 0);
     width: 700px;
     height: 600px;
     margin-left: 300px;
@@ -12,11 +14,11 @@ body{
 
 .main-game{
     padding-bottom: 50px;
-    border-color: green;
+    border-color: rgb(255, 255, 255);
     border-style: dashed;
     width: 600px;
     margin-left: 50;
-    background: yellow;
+    background: black;
     margin-top: 60px;
     height: 400px;
 
@@ -24,31 +26,31 @@ body{
 #keyStart{
     position: relative;
     text-align: left;
-    left: 360;
+    left: 330;
     top: 20;
 }
 
 #numberofWins{
     position: relative;
-    left: 455;
+    left: 425;
     top: 20;
 }
 
 #wordtoGuess{
     position: relative;
-    left: 410px;
+    left: 380px;
     top: 20px;
 }
 #guessesRemaining{
     position: relative;
-    left: 455px;
+    left: 425px;
     top: 20px;
 
 }
 
 #user-guessed{    
     position: relative;
-    left: 420px;
+    left: 390px;
     top: 20px;
 }
 
@@ -61,7 +63,7 @@ img{
 .answer{
     font-size: large;
     position: relative;
-    left: 260px;
+    left: 290px;
     top: 40px;
 
 
