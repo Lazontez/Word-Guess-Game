@@ -1,6 +1,3 @@
-
-
-
 <html>
 
     <head>
@@ -48,8 +45,10 @@
             for (var i=0; i<guessingWord.length;i++){
                 currentWordDisplay[i]="_"
                  }
+            var grabCurrentword = document.getElementById("wordtoGuess")
+                grabCurrentword.textContent = currentWordDisplay
             
-            guessLeft.textContent =remainingGuesses
+            
                 //Sets a variable for users input 
             var userKey;
             document.onkeyup = function(event){
@@ -57,29 +56,25 @@
                 // if (userKey==guessingWord.find(userKey)||(userKey!==guessingWord.find(userKey))){
                  
                             //*****Correct Guess Statement
-                       
+                        
+                    
+                      
                         //Displays & Adds the correct letter guessed to current word array 
                         if (guessingWord.indexOf(userKey) > -1) {
                             
                             currentWordDisplay[guessingWord.indexOf(userKey)] = userKey
-                            var grabCurrentword = document.getElementById("wordtoGuess")
-                            grabCurrentword.textContent = currentWordDisplay
-                          }
-
+                        }
                              //*****Wrong Guess Statement
 
                         //Displays & Adds the incorrect letter guessed to the nonCorrect array
-                        else {
-                                nonCorrect[guessingWord.indexOf(userKey)] = userKey
+                        else if(guessingWord.indexOf(userKey===-1 ) )
+                        {
+                                nonCorrect.push(userKey)
                                 var grabIncorrect = document.getElementById("user-guessed")
                                 grabIncorrect.textContent = nonCorrect
+                                console.log(nonCorrect)
 
-                        //Sets the remaining letters to the length of the 12
-                            var remainingGuesses= 12
-                        //Grabs guessRemaining ID
-                             var guessLeft=document.getElementById('guessesRemaining');
-                             remainingGuesses--
-            
+                        
                         }
                         // console.log(guessingWord.indexOf(userKey));
                 
@@ -87,20 +82,14 @@
                 // guessLeft.textContent =remainingGuesses
                 
             // };
-
             // while(remainingGuesses>guessingWord.length){
                 
             //     document.get
             // }
-
             
-
             
            
-
             
-
-
             }
             
             }
