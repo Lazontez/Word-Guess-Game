@@ -20,11 +20,11 @@
 
 
             <p style="position: relative; left: 390px;  top: 20px;">Current Word</p>
-            <div id="wordtoGuess">_ _ _ _ _ _ _</div>
+            <div id="wordtoGuess"></div>
             <p style="position: relative; left: 340px;top: 20px;">Number of Guesses Remaining</p>
             <div id="guessesRemaining"></div>
             <p style="position: relative; left: 365px; top: 20px">Letters Already Guessed</p>
-            <div id="user-guessed">....</div>
+            <div id="user-guessed"></div>
             <img src="Assets/images/hangman.jpg">
         </section>
     </div>
@@ -52,17 +52,19 @@
             //Makes the content in the word to guess equal to the current word display
             grabCurrentword.textContent = currentWordDisplay
 
-            //Makes the content for the guesses remaining id equal to the remaining guess variable
             var grabRemaining = document.getElementById("guessesRemaining")
             var remainingGuesses = 10
-            grabRemaining.textContent = remainingGuesses
-
-
+            grabRemaining.textContent=remainingGuesses
+            
+            //Sets number of wins to zero
+            var wins=0
+            var grabWins= document.getElementById("numberofWins")
+            grabWins.textContent=wins
             //Sets a variable for users input 
             var userKey;
+
             document.onkeyup = function (event) {
                 userKey = event.key;
-                // if (userKey==guessingWord.find(userKey)||(userKey!==guessingWord.find(userKey))){
 
                 //*****Correct Guess Statement
 
@@ -73,19 +75,29 @@
 
                     currentWordDisplay[guessingWord.indexOf(userKey)] = userKey
                     grabCurrentword.textContent = currentWordDisplay
-                }
+                    }
                 //*****Wrong Guess Statement
 
                 //Displays & Adds the incorrect letter guessed to the nonCorrect array
                 else if (guessingWord.indexOf(userKey === -1)) {
-                    remainingGuesses--
+                    
                     nonCorrect.push(userKey)
                     var grabIncorrect = document.getElementById("user-guessed")
                     grabIncorrect.textContent = nonCorrect
+                
                     console.log(nonCorrect)
+                     //Makes the content for the guesses remaining id equal to the remaining guess variable
+                    var grabRemaining = document.getElementById("guessesRemaining")
+                    var remainingGuesses = 10
+                    grabRemaining.textContent = remainingGuesses
 
 
                 }
+                if(currentWordDisplay.indexOf = guessingWord.indexOf){
+                     var grabAnswer = document.getElementsByClassName(".answer")
+                     grabAnswer.textContent= guessingWord
+                 }
+                
                 // console.log(guessingWord.indexOf(userKey));
 
                 // remainingGuesses--
